@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --heading-text: #e3ad0b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+
+
+/* Apply Oswald everywhere */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+span,
+button,
+input,
+textarea {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+/* Headings */
+h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+/* 36px */
+h2 {
+  font-size: 3.0rem;
+  font-weight: 600;
+}
+
+/* 30px */
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+/* 24px */
+h4 {
+  font-size: 2.0rem;
+  font-weight: 500;
+}
+
+/* 20px */
+h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* 18px */
+h6 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* 16px */
+
+/* Paragraph & other text */
+p,
+a,
+li,
+span,
+input,
+textarea,
+button {
+  font-size: 1.6rem;
+  /* 16px */
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.section-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 4rem;
+  color: var(--heading-text);
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.5rem;
+  /* gap between text and line */
+  transform: translateX(-50%);
+  width: 15rem;
+  /* length of line */
+  height: 0.2rem;
+  background-color: var(--heading-text);
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -19px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--heading-text);
+  transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  -o-transform: translateX(-50%) rotate(45deg);
+}
+
+.text-highlight{
+  color: var(--heading-text);
+  font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            navbar section start                            */
+/* -------------------------------------------------------------------------- */
+
+header {
+  background-color: transparent;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.sticky {
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 12.5rem;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  position: relative;
+  color: var(--heading-text);
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-size: 2.6rem;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  /* space below text */
+  width: 100%;
+  height: 2px;
+  background: var(--heading-text);
+  transform: scaleX(0);
+  /* hidden by default */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a.active {
+  transform: scaleX(1);
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  -o-transform: scaleX(1);
+}
+
+
+nav .menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--heading-text);
+}
+
+@media (max-width: 768px) {
+  nav .logo img {
+    width: 8rem;
+    height: auto;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6.2rem;
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 20rem;
+    padding: 1rem;
+    transition: top 0.5s ease-in !important;
+    -webkit-transition: top 0.5s ease-in !important;
+    -moz-transition: top 0.5s ease-in !important;
+    -ms-transition: top 0.5s ease-in !important;
+    -o-transition: top 0.5s ease-in !important;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  nav .logo img {
+    width: 8rem;
+  }
+
+  nav a {
+    font-size: 1.4rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             navbar section end                             */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                             hero section start                             */
+/* -------------------------------------------------------------------------- */
+
+.hero-section {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              hero section end                              */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                             about section start                            */
+/* -------------------------------------------------------------------------- */
+
+.about-image {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about-card{
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              about section end                             */
+/* -------------------------------------------------------------------------- */
