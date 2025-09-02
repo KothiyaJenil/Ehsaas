@@ -225,6 +225,11 @@ nav .menu-toggle {
 }
 
 @media (max-width: 768px) {
+
+  nav{
+    gap: 20rem;
+  }
+
   nav .logo img {
     width: 8rem;
     height: auto;
