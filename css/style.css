@@ -143,6 +143,15 @@ ol {
   font-weight: 700;
 }
 
+.btn-primary {
+  background-color: #e3ad0b;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #c9980a;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                            navbar section start                            */
 /* -------------------------------------------------------------------------- */
