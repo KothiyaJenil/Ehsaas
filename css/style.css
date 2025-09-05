@@ -2,6 +2,8 @@
 
 :root {
   --heading-text: #e3ad0b;
+  --btn-hover: #c9980a;
+  --btn-primary: #e3ad0b;
 }
 
 * {
@@ -144,12 +146,12 @@ ol {
 }
 
 .btn-primary {
-  background-color: #e3ad0b;
+  background-color: var(--btn-primary);
   border: none;
 }
 
-.btn-primary:hover {
-  background-color: #c9980a;
+.btn:hover {
+  background-color: var(--btn-hover) !important;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -353,6 +355,27 @@ nav .menu-toggle {
   background-color: rgb(255 247 237 / var(--tw-bg-opacity, 1));
 }
 
+.product-card {
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.pill-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  margin: 5px;
+  font-size: 1.2rem;
+  border: none;
+  background-color: #fff4db;
+  color: #c76d00;
+  transition: all 0.3s ease;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                             product section end                            */
 /* -------------------------------------------------------------------------- */
@@ -364,7 +387,7 @@ nav .menu-toggle {
 /* -------------------------------------------------------------------------- */
 
 .contact-card {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 25rem;
   margin: 2rem;
 }
@@ -375,6 +398,10 @@ nav .menu-toggle {
 
 .contact-form {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.contact-icon {
+  color: var(--btn-hover);
 }
 
 /* -------------------------------------------------------------------------- */
