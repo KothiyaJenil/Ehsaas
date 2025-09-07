@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&display=swap');
 
 :root {
-  --heading-text: #e3ad0b;
-  --btn-hover: #c9980a;
-  --btn-primary: #e3ad0b;
+  --nav-text: #e3ad0b;
+  --heading-text: #e32929;
+  --btn-primary: #e32929;
+  --btn-hover: #c62828;
+  --pill-btn-bg: #ffe3e3;
+  --pill-btn-text: #e32929;
 }
 
 * {
@@ -353,7 +356,9 @@ nav .menu-toggle {
 /* -------------------------------------------------------------------------- */
 
 .product-section {
-  background-color: rgb(255 247 237 / var(--tw-bg-opacity, 1));
+  background-color: #fff0f0;
+
+  /* background-color: #ffe3e3; */
 }
 
 .product-card {
@@ -367,8 +372,8 @@ nav .menu-toggle {
   margin: 5px;
   font-size: 1.2rem;
   border: none;
-  background-color: #fff4db;
-  color: #c76d00;
+  background-color: var(--pill-btn-bg);
+  color: var(--pill-btn-text);
   transition: all 0.3s ease;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
@@ -414,8 +419,8 @@ nav .menu-toggle {
 /*                            footer section start                            */
 /* -------------------------------------------------------------------------- */
 
-footer{
-    background-color: rgb(255 247 237 / var(--tw-bg-opacity, 1));
+footer {
+  background-color: #fff0f0;
 
 }
 
