@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Oswald:wght@200..700&display=swap');
 
 :root {
-  --nav-text: #e3ad0b;
+  /* --nav-text: #e3ad0b; */
   --heading-text: #e32929;
   --btn-primary: #e32929;
   --btn-hover: #c62828;
@@ -391,6 +391,10 @@ nav .menu-toggle {
 /* -------------------------------------------------------------------------- */
 /*                            contact section start                           */
 /* -------------------------------------------------------------------------- */
+
+.contact-map{
+  
+}
 
 .contact-card {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
