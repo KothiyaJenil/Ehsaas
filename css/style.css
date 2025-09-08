@@ -163,7 +163,7 @@ ol {
 
 header {
   /* background-color: transparent; */
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem 2rem;
   font-size: 1.6rem;
   position: fixed;
@@ -268,7 +268,8 @@ nav .menu-toggle {
     -ms-transition: top 0.5s ease-in !important;
     -o-transition: top 0.5s ease-in !important;
   }
-/* 
+
+  /* 
   .nav-links.sticky {
     background-color: rgba(0, 0, 0, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
