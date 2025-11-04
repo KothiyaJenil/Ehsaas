@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Drink Web Page</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Sticky Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .navbar .nav-links {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .navbar .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .navbar .nav-links a:hover {
+      color: #E52525;
+    }
+
+    .navbar .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .navbar .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+
+    /* Hero Section - Using img tag as background */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero .container {
+      text-align: center;
+      z-index: 10;
+      position: relative;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      color: #333;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+      color: #333;
+    }
+
+    .hero .cta-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #E52525;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .hero .cta-button:hover {
+      background-color: #1FA23E;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Wave Styles */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      z-index: 2;
+      overflow: hidden;
+    }
+
+    .wave svg {
+      position: absolute;
+      bottom: 0;
+      width: 200%;
+      height: 100%;
+      animation: wave-animation 10s linear infinite;
+    }
+
+    .wave path {
+      fill: rgba(255, 255, 255, 0.8);
+      /* Semi-transparent white wave */
+    }
+
+    @keyframes wave-animation {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Bubbles Container */
+    .bubbles {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* Bubble Styles */
+    .bubble {
+      position: absolute;
+      bottom: 0;
+      border-radius: 50%;
+      animation: rise linear infinite;
+      opacity: 0.6;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes rise {
+      0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.6;
+      }
+
+      50% {
+        transform: translateY(-50vh) translateX(10px) scale(1.1);
+        opacity: 0.4;
+      }
+
+      100% {
+        transform: translateY(-100vh) translateX(-5px) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem 0;
+      }
+
+      .navbar .nav-links.active {
+        display: flex;
+      }
+
+      .navbar .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero img {
+        max-width: 200px;
+        margin-top: 1rem;
+        position: static;
+        /* Override for mobile to show inline */
+        width: auto;
+        height: auto;
+        object-fit: initial;
+      }
+
+      .wave {
+        height: 100px;
+        /* Smaller wave on mobile */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Cold Drinks Co.</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <img src="images/hero-img-2.jpg" alt="Cold Drink Bottle">
+    <!-- Wave Element -->
+    <div class="wave">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,60 C300,120 600,0 900,60 C1050,90 1200,30 1200,60 L1200,120 L0,120 Z"></path>
+        <path d="M0,80 C300,40 600,120 900,80 C1050,50 1200,90 1200,80 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+    <!-- Bubbles Container -->
+    <div class="bubbles"></div>
+  </section>
+
+  <!-- Placeholder for other sections -->
+  <section id="about" style="height: 100vh; background-color: #f4f4f4; padding: 2rem; text-align: center;">
+    <h2>About Us</h2>
+    <p>Learn more about our refreshing cold drinks.</p>
+  </section>
+  <section id="products" style="height: 100vh; background-color: #e9e9e9; padding: 2rem; text-align: center;">
+    <h2>Our Products</h2>
+    <p>Discover our range of cold beverages.</p>
+  </section>
+  <section id="contact" style="height: 100vh; background-color: #d4d4d4; padding: 2rem; text-align: center;">
+    <h2>Contact</h2>
+    <p>Get in touch with us.</p>
+  </section>
+
+  <script>
+    // Toggle mobile menu
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    // Bubble generation continuously, starting immediately on page load
+    const bubblesContainer = document.querySelector('.bubbles');
+    const colors = ['#E52525', '#1FA23E'];
+
+    function createBubble() {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+
+      const size = Math.random() * 20 + 5;
+      const left = Math.random() * 100;
+      const duration = Math.random() * 4 + 6;
+      const delay = Math.random() * 3;
+      const color = colors[Math.floor(Math.random() * colors.length)];
+
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${left}%`;
+      bubble.style.backgroundColor = color;
+      bubble.style.animationDuration = `${duration}s`;
+      bubble.style.animationDelay = `${delay}s`;
+
+      bubblesContainer.appendChild(bubble);
+
+      // Remove bubble after animation completes to prevent buildup
+      setTimeout(() => {
+        bubble.remove();
+      }, (duration + delay) * 1000);
+    }
+
+    // Start bubble creation immediately on page load, then continue periodically
+    window.addEventListener('load', () => {
+      createBubble(); // Create first bubble instantly
+      setInterval(createBubble, Math.random() * 1000 + 500);
+    });
+  </script>
+</body>
+
+</html>
