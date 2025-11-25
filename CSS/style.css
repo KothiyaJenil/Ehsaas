@@ -31,7 +31,6 @@ body {
 /*                         reusable code section start                        */
 /* -------------------------------------------------------------------------- */
 
-/* Typography: Headings */
 h1,
 h2,
 h3,
@@ -44,8 +43,6 @@ h6 {
   line-height: 1.2;
 }
 
-
-/* Text links */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -70,17 +67,25 @@ ol {
 /* -------------------------------------------------------------------------- */
 
 
+
 /* -------------------------------------------------------------------------- */
 /*                            navbar section start                            */
 /* -------------------------------------------------------------------------- */
 
 header {
-  padding: 1rem 2rem;
+  padding: 0.6rem;
   font-size: 1.6rem;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  background-color: var(--light-off--white);
+}
+
+.scrolled {
+  background: rgba(185, 185, 185, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 nav {
@@ -127,7 +132,6 @@ nav a {
   width: 100%;
 }
 
-
 nav .menu-toggle {
   display: none;
   background: none;
@@ -140,6 +144,71 @@ nav .menu-toggle {
 /*                             navbar section end                             */
 /* -------------------------------------------------------------------------- */
 
+main {
+  padding-top: 6rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             hero section start                             */
+/* -------------------------------------------------------------------------- */
+
+.hero-section {
+  width: 100%;
+}
+
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* bubble container OVER the image */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* bubble styles */
+.bubble {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50%;
+  animation: rise var(--speed) linear forwards;
+}
+
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-120vh) scale(1.6);
+    opacity: 0;
+  }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              hero section end                              */
+/* -------------------------------------------------------------------------- */
+
 
 
 
@@ -149,28 +218,26 @@ nav .menu-toggle {
 /* -------------------------------------------------------------------------- */
 
 
-/* ---------------------------------- 1024 ---------------------------------- */
+/*! ---------------------------------- 1024 ---------------------------------- */
 
-@media (max-width: 1024px) {
-  
-
-}
+@media (max-width: 1024px) {}
 
 
-/* ----------------------------------- 768 ---------------------------------- */
+/*! ----------------------------------- 768 ---------------------------------- */
 
 @media (max-width: 768px) {
 
-  /* ----------------------------- navbar section ----------------------------- */
-  nav .logo img{
+  /** ----------------------------- navbar section ----------------------------- */
+  nav .logo img {
     width: 10rem;
   }
 
   .nav-links {
+    background: rgba(99, 99, 99, 0.5);
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 5.4rem;
+    top: 6rem;
     width: 100% !important;
     padding: 1rem;
     margin-top: 1rem;
@@ -192,15 +259,18 @@ nav .menu-toggle {
   nav .menu-toggle {
     display: block;
   }
+
+  /** ------------------------------ hero section ------------------------------ */
+  main {}
 }
 
 
-/* ----------------------------------- 480 ---------------------------------- */
+/*! ----------------------------------- 480 ---------------------------------- */
 
 @media (max-width: 480px) {
 
-  /* ----------------------------- navbar section ----------------------------- */
-  nav .logo img{
+  /** ----------------------------- navbar section ----------------------------- */
+  nav .logo img {
     width: 8rem;
   }
 
