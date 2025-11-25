@@ -233,7 +233,7 @@ main {
   }
 
   .nav-links {
-    background: rgba(99, 99, 99, 0.5);
+    background: rgba(185, 185, 185, 0.8);
     display: none;
     flex-direction: column;
     position: absolute;
