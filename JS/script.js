@@ -39,7 +39,7 @@ function createBubble() {
     // Glow (stronger + visible)
     bubble.style.boxShadow = `0 0 30px ${color}`;
 
-    const size = Math.random() * 27 + 8; 
+    const size = Math.random() * 17 + 5; 
     bubble.style.width = size + "px";
     bubble.style.height = size + "px";
 

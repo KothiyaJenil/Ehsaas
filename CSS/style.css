@@ -22,8 +22,6 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--color-bg-white);
-  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -37,14 +35,12 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-text-primary);
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 a {
-  color: var(--color-primary);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -60,6 +56,45 @@ ol {
   list-style: none;
 }
 
+.section-heading {
+  font-size: 4rem;
+  color: var(--red);
+  font-weight: bold;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  width: 15rem;
+  height: 0.4rem;
+  background: var(--green);
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.card {
+  border: 0 !important;
+}
+
+.soda-btn-gradient {
+  background: linear-gradient(135deg, #E52525, #ff6b6b);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.soda-btn-gradient:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+}
 
 
 /* -------------------------------------------------------------------------- */
@@ -170,7 +205,6 @@ main {
   object-fit: cover;
 }
 
-/* bubble container OVER the image */
 .bubbles {
   position: absolute;
   inset: 0;
@@ -178,7 +212,6 @@ main {
   pointer-events: none;
 }
 
-/* bubble styles */
 .bubble {
   position: absolute;
   bottom: -150px;
@@ -209,6 +242,68 @@ main {
 /*                              hero section end                              */
 /* -------------------------------------------------------------------------- */
 
+
+/* -------------------------------------------------------------------------- */
+/*                            product section start                           */
+/* -------------------------------------------------------------------------- */
+
+.img-box {
+  position: relative;
+}
+
+.img-box::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 80%;
+  background: linear-gradient(135deg,
+      rgba(229, 37, 37, 0.25),
+      rgba(31, 162, 62, 0.25),
+      rgba(246, 139, 31, 0.25));
+  z-index: 0;
+
+  /* Initial blob shape */
+  clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
+
+  animation: blobAnim 6s ease-in-out infinite alternate;
+}
+
+/* Animation Keyframes */
+@keyframes blobAnim {
+  0% {
+    clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
+  }
+
+  50% {
+    clip-path: inset(0 round 45% 55% 40% 60% / 60% 50% 55% 50%);
+  }
+
+  100% {
+    clip-path: inset(0 round 60% 40% 50% 50% / 50% 60% 45% 55%);
+  }
+}
+
+.img-box img {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  /* reduce image size */
+  margin: 0 auto;
+  /* center it */
+  display: block;
+}
+
+
+.product-card-title {
+  font-size: 3rem;
+  color: var(--green);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             product section end                            */
+/* -------------------------------------------------------------------------- */
 
 
 
@@ -278,7 +373,7 @@ main {
     font-size: 1.4rem;
   }
 
-  .nav-links{
+  .nav-links {
     top: 5.2rem;
   }
 }
