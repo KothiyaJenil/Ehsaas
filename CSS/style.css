@@ -365,6 +365,10 @@ main {
 
 @media (max-width: 480px) {
 
+  main{
+    padding-top: 5rem;
+  }
+
   /** ----------------------------- navbar section ----------------------------- */
   nav .logo img {
     width: 8rem;
