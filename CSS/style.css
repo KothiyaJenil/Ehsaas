@@ -297,6 +297,65 @@ main {
   color: var(--green);
 }
 
+/* ===========================
+   Mobile Responsive Styling
+   =========================== */
+@media (max-width: 576px) {
+
+  /* Product section spacing */
+  .product-section {
+    padding: 2rem 0;
+  }
+
+  /* Reduce product title size */
+  .product-card-title {
+    font-size: 1.8rem;
+  }
+
+  /* Reduce ml size text */
+  .card-text {
+    font-size: 1.1rem;
+  }
+
+  /* Resize button */
+  .soda-btn-gradient {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  /* Resize image */
+  .img-box img {
+    width: 60%;
+  }
+
+  /* Mobile blob animation size */
+  .img-box::before {
+    top: 8px;
+    left: 8px;
+    width: calc(100% - 16px);
+    height: 65%;
+  }
+}
+
+/* ===========================
+   Tablet Responsive Styling
+   =========================== */
+@media (min-width: 577px) and (max-width: 768px) {
+
+  .product-card-title {
+    font-size: 2.4rem;
+  }
+
+  .card-text {
+    font-size: 1.4rem;
+  }
+
+  .img-box img {
+    width: 65%;
+  }
+}
+
+
 /* -------------------------------------------------------------------------- */
 /*                             product section end                            */
 /* -------------------------------------------------------------------------- */
