@@ -259,16 +259,11 @@ main {
   left: 10px;
   width: calc(100% - 20px);
   height: 80%;
-  background: linear-gradient(135deg,
-      rgba(229, 37, 37, 0.25),
-      rgba(31, 162, 62, 0.25),
-      rgba(246, 139, 31, 0.25));
+  background: linear-gradient(135deg, rgba(229, 37, 37, 0.25), rgba(31, 162, 62, 0.25), rgba(246, 139, 31, 0.25));
   z-index: 0;
-
-  /* Initial blob shape */
-  clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
-
-  animation: blobAnim 6s ease-in-out infinite alternate;
+  /*Initialblobshape*/clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
+  animation: blobAnim 5s ease-in-out infinite alternate;
+  -webkit-animation: blobAnim 5s ease-in-out infinite alternate;
 }
 
 /* Animation Keyframes */
@@ -357,7 +352,6 @@ main {
   }
 
   /** ------------------------------ hero section ------------------------------ */
-  main {}
 }
 
 
@@ -365,7 +359,7 @@ main {
 
 @media (max-width: 480px) {
 
-  main{
+  main {
     padding-top: 5rem;
   }
 
