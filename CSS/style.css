@@ -7,8 +7,6 @@
   --light-off--white: #FFF8F5;
 }
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -21,12 +19,12 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Epunda Slab", serif;
   line-height: 1.6;
 }
 
 /* -------------------------------------------------------------------------- */
-/*                         reusable code section start                        */
+/**                         reusable code section start                        */
 /* -------------------------------------------------------------------------- */
 
 h1,
@@ -35,12 +33,19 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Epunda Slab", serif;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
+p {
+  font-family: "Epunda Slab", serif;
+  font-size: 1.6rem;
+}
+
 a {
+  font-family: "Epunda Slab", sans-serif;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -57,6 +62,7 @@ ol {
 }
 
 .section-heading {
+  font-family: "Oswald", sans-serif;
   font-size: 4rem;
   color: var(--red);
   font-weight: bold;
@@ -75,36 +81,13 @@ ol {
   border-radius: 2rem;
 }
 
-.card {
-  border: 0 !important;
-}
-
-.soda-btn-gradient {
-  background: linear-gradient(135deg, #E52525, #ff6b6b);
-  color: white;
-  padding: 10px 24px;
-  border: none;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.soda-btn-gradient:hover {
-  filter: brightness(1.15);
-  transform: translateY(-2px);
-}
-
-
 /* -------------------------------------------------------------------------- */
-/*                          reusable code section end                         */
+/**                          reusable code section end                         */
 /* -------------------------------------------------------------------------- */
 
 
-
 /* -------------------------------------------------------------------------- */
-/*                            navbar section start                            */
+/**                            navbar section start                            */
 /* -------------------------------------------------------------------------- */
 
 header {
@@ -113,8 +96,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1000;
-  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   background-color: var(--light-off--white);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
 .scrolled {
@@ -176,8 +159,59 @@ nav .menu-toggle {
   color: var(--red);
 }
 
+/* ---------------------------- navbar responsive --------------------------- */
+@media (max-width: 768px) {
+  nav .logo img {
+    width: 10rem;
+  }
+
+  .nav-links {
+    background: rgba(185, 185, 185, 0.8);
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5.5rem;
+    width: 100% !important;
+    padding: 1rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in-out !important;
+    -webkit-transition: all 0.3s ease-in-out !important;
+    -moz-transition: all 0.3s ease-in-out !important;
+    -ms-transition: all 0.3s ease-in-out !important;
+    -o-transition: all 0.3s ease-in-out !important;
+  }
+
+  .nav-links li {
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav .menu-toggle {
+    display: block;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  nav .logo img {
+    width: 8rem;
+  }
+
+  nav a {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    top: 4.4rem;
+  }
+}
+
 /* -------------------------------------------------------------------------- */
-/*                             navbar section end                             */
+/**                             navbar section end                             */
 /* -------------------------------------------------------------------------- */
 
 main {
@@ -185,8 +219,9 @@ main {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                             hero section start                             */
+/**                             hero section start                             */
 /* -------------------------------------------------------------------------- */
+
 
 .hero-section {
   width: 100%;
@@ -237,205 +272,97 @@ main {
   }
 }
 
-
-
 /* -------------------------------------------------------------------------- */
-/*                              hero section end                              */
+/**                              hero section end                              */
 /* -------------------------------------------------------------------------- */
 
 
 /* -------------------------------------------------------------------------- */
-/*                            product section start                           */
+/**                            product section start                           */
 /* -------------------------------------------------------------------------- */
-
-.img-box {
-  position: relative;
-}
-
-.img-box::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: calc(100% - 20px);
-  height: 80%;
-  background: linear-gradient(135deg, rgba(229, 37, 37, 0.25), rgba(31, 162, 62, 0.25), rgba(246, 139, 31, 0.25));
-  z-index: 0;
-  /*Initialblobshape*/clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
-  animation: blobAnim 5s ease-in-out infinite alternate;
-  -webkit-animation: blobAnim 5s ease-in-out infinite alternate;
-}
-
-/* Animation Keyframes */
-@keyframes blobAnim {
-  0% {
-    clip-path: inset(0 round 32% 68% 32% 68% / 55% 40% 60% 45%);
-  }
-
-  50% {
-    clip-path: inset(0 round 45% 55% 40% 60% / 60% 50% 55% 50%);
-  }
-
-  100% {
-    clip-path: inset(0 round 60% 40% 50% 50% / 50% 60% 45% 55%);
-  }
-}
-
-.img-box img {
-  position: relative;
-  z-index: 1;
-  width: 70%;
-  /* reduce image size */
-  margin: 0 auto;
-  /* center it */
-  display: block;
-}
-
 
 .product-card-title {
-  font-size: 3rem;
-  color: var(--green);
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--orange);
+  font-family: "oswald", sans-serif;
 }
 
-/* ===========================
-   Mobile Responsive Styling
-   =========================== */
+/* -------------------------------------------------------------------------- */
+/**                             product section end                            */
+/* -------------------------------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/**                         responsive UI section start                        */
+/* -------------------------------------------------------------------------- */
+
+/* Large tablets and below */
+@media (max-width: 992px) {
+  .section-heading {
+    font-size: 3.2rem;
+  }
+
+  .section-heading::after {
+    width: 12rem;
+    bottom: -0.8rem;
+  }
+}
+
+/* Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 2.8rem;
+  }
+
+  .section-heading::after {
+    width: 10rem;
+    height: 0.35rem;
+  }
+}
+
+/* Large phones (≤ 576px) */
 @media (max-width: 576px) {
-
-  /* Product section spacing */
-  .product-section {
-    padding: 2rem 0;
-  }
-
-  /* Reduce product title size */
-  .product-card-title {
-    font-size: 1.8rem;
-  }
-
-  /* Reduce ml size text */
-  .card-text {
-    font-size: 1.1rem;
-  }
-
-  /* Resize button */
-  .soda-btn-gradient {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-  }
-
-  /* Resize image */
-  .img-box img {
-    width: 60%;
-  }
-
-  /* Mobile blob animation size */
-  .img-box::before {
-    top: 8px;
-    left: 8px;
-    width: calc(100% - 16px);
-    height: 65%;
-  }
-}
-
-/* ===========================
-   Tablet Responsive Styling
-   =========================== */
-@media (min-width: 577px) and (max-width: 768px) {
-
-  .product-card-title {
+  .section-heading {
     font-size: 2.4rem;
   }
 
-  .card-text {
-    font-size: 1.4rem;
-  }
-
-  .img-box img {
-    width: 65%;
+  .section-heading::after {
+    width: 8rem;
+    height: 0.3rem;
   }
 }
 
-
-/* -------------------------------------------------------------------------- */
-/*                             product section end                            */
-/* -------------------------------------------------------------------------- */
-
-
-
-
-/* -------------------------------------------------------------------------- */
-/*                         responsive UI section start                        */
-/* -------------------------------------------------------------------------- */
-
-
-/*! ---------------------------------- 1024 ---------------------------------- */
-
-@media (max-width: 1024px) {}
-
-
-/*! ----------------------------------- 768 ---------------------------------- */
-
-@media (max-width: 768px) {
-
-  /** ----------------------------- navbar section ----------------------------- */
-  nav .logo img {
-    width: 10rem;
-  }
-
-  .nav-links {
-    background: rgba(185, 185, 185, 0.8);
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 5.5rem;
-    width: 100% !important;
-    padding: 1rem;
-    margin-top: 1rem;
-    transition: all 0.3s ease-in-out !important;
-    -webkit-transition: all 0.3s ease-in-out !important;
-    -moz-transition: all 0.3s ease-in-out !important;
-    -ms-transition: all 0.3s ease-in-out !important;
-    -o-transition: all 0.3s ease-in-out !important;
-  }
-
-  .nav-links li {
-    padding: 1rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  nav .menu-toggle {
-    display: block;
-  }
-
-  /** ------------------------------ hero section ------------------------------ */
-}
-
-
-/*! ----------------------------------- 480 ---------------------------------- */
-
+/* Small phones (≤ 480px) */
 @media (max-width: 480px) {
-
   main {
     padding-top: 5rem;
   }
 
-  /** ----------------------------- navbar section ----------------------------- */
-  nav .logo img {
-    width: 8rem;
+  .section-heading {
+    font-size: 2rem;
   }
 
-  nav a {
-    font-size: 1.4rem;
+  .section-heading::after {
+    width: 6rem;
+    height: 0.25rem;
   }
 
-  .nav-links {
-    top: 4.4rem;
+}
+
+/* Mini phones (≤ 360px) */
+@media (max-width: 360px) {
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .section-heading::after {
+    width: 5rem;
   }
 }
 
 /* -------------------------------------------------------------------------- */
-/*                          responsive UI section end                         */
+/**                          responsive UI section end                         */
 /* -------------------------------------------------------------------------- */
