@@ -208,6 +208,17 @@ h6,
     object-fit: cover;
 }
 
+.about-card-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+}
+
+
+
 .section-title {
     font-size: 3rem;
     color: var(--primary-red);
@@ -220,12 +231,14 @@ h6,
 .section-title::after {
     content: '';
     display: block;
-    width: 60%;
+    width: 100px;
     height: 4px;
     background: var(--primary-orange);
     margin: 10px auto 0;
     border-radius: 2px;
 }
+
+/* Products Section */
 
 /* Products Section */
 .products-section {
@@ -236,42 +249,112 @@ h6,
 
 .product-card {
     border: none;
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+    /* More rounded */
+    overflow: visible;
+    /* Allow blob to be seen if needed, though we contain it */
+    transition: transform 0.3s ease;
+    background: transparent;
+    position: relative;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+
+.product-blob-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    z-index: 0;
+    opacity: 0.15;
+    /* Light pastel feel */
+    background-color: #eee;
+    /* Default */
 }
+
+/* Flavor Colors */
+.flavor-red .product-blob-bg {
+    background-color: var(--primary-red);
+}
+
+.flavor-green .product-blob-bg {
+    background-color: var(--primary-green);
+}
+
+.flavor-orange .product-blob-bg {
+    background-color: var(--primary-orange);
+}
+
+
+/* Specific card blob styling - to make it look "bloby" we can use a second shape or just rounded box 
+   The reference image shows a rect with wavy edges or just a solid rounded rect. 
+   Let's stick to the rounded rect provided by .product-blob-bg for now as base. 
+   To add "blob" feel, we might mask or use SVG, but simple rounded rect (squircle) is close to the flat design look.
+*/
+
 
 .product-img-wrapper {
-    height: 300px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    background: radial-gradient(circle, #f8f9fa 50%, #e9ecef 100%);
     position: relative;
-    overflow: hidden;
+    z-index: 1;
+    background: transparent;
+    /* Remove old radial gradient */
+    margin-bottom: 1rem;
 }
 
 .product-img-wrapper img {
     max-height: 100%;
     transition: transform 0.5s ease;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+    position: relative;
     z-index: 1;
 }
 
-.product-card:hover .product-img-wrapper img {
-    transform: scale(1.1) rotate(5deg);
+.card-title {
+    font-family: 'Brush Script MT', cursive;
+    /* Or similar handwriting font if available, falling back to custom */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    transform: rotate(-5deg);
+    display: inline-block;
 }
 
-.card-body {
-    padding: 2rem;
-    text-align: center;
+/* Update fonts for title to match "Mockup" style roughly if we can't use new font */
+.flavor-red .card-title {
+    color: var(--primary-red);
+}
+
+.flavor-green .card-title {
+    color: var(--primary-green);
+}
+
+.flavor-orange .card-title {
+    color: var(--primary-orange);
+}
+
+
+.product-sizes li {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #555;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 8px;
+    border-radius: 12px;
 }
 
 .card-title {
