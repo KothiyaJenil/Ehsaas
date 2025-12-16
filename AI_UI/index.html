@@ -9,16 +9,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="100">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">EHSAAS</a>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="EHSAAS" height="50">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -84,14 +87,50 @@
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 text-center reveal">
-                    <h2 class="section-title">Who We Are</h2>
-                    <p class="lead mb-4">At Ehsaas, we believe in the power of refreshment. Our drinks are crafted with
-                        the finest ingredients to deliver a taste that awakens your senses.</p>
-                    <p>Born from a passion for quality and innovation, Ehsaas Cold Drinks brings you a symphony of
-                        flavors that define moments of joy and celebration. Whether it's a hot summer day or a festive
-                        gathering, we are there to make it special.</p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center reveal">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="lead">At EHSAAS, we bring you the perfect blend of tradition and innovation in refreshing
+                        beverages. With a commitment to quality and taste, our wide range of products are crafted to
+                        delight consumers across India. Every sip carries the promise of freshness, natural flavors, and
+                        the highest standards of production.</p>
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+                <div class="col-md-4 reveal">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3 text-primary-red">
+                            <i class="fas fa-award fa-3x" style="color: var(--primary-red);"></i>
+                        </div>
+                        <h4 class="mb-3">Quality</h4>
+                        <p>We believe quality is the foundation of trust. Our beverages are made with carefully selected
+                            ingredients, processed under strict hygiene standards, and tested to ensure purity and
+                            consistency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-flask fa-3x" style="color: var(--primary-orange);"></i>
+                        </div>
+                        <h4 class="mb-3">INNOVATION & RESEARCH</h4>
+                        <p>Innovation drives us forward. Our dedicated R&D team continuously works to create new
+                            flavors, improve existing products, and study consumer preferences to stay ahead of trends.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 reveal">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-industry fa-3x" style="color: var(--primary-green);"></i>
+                        </div>
+                        <h4 class="mb-3">MODERN FACILITIES</h4>
+                        <p>Our state-of-the-art production facility is equipped with advanced machinery and automation.
+                            Operating with eco-friendly practices, our skilled workforce ensures every bottle meets
+                            perfection.</p>
+                    </div>
                 </div>
             </div>
         </div>
