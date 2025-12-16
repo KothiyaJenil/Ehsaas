@@ -153,14 +153,16 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Berry Blast</h3>
-                            <ul class="product-sizes list-unstyled d-flex justify-content-center gap-2 mb-3">
-                                <li>100ml</li>
-                                <li>250ml</li>
-                                <li>1.25 L</li>
-                            </ul>
-                            <p class="card-text">A bold fusion of ripe strawberries and cherries. Sweet, tangy, and
-                                absolutely electric.</p>
-                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4">See Details</button>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#productModal"
+                                data-title="Berry Blast"
+                                data-img="assets/images/product-red.png"
+                                data-desc="A bold fusion of ripe strawberries and cherries. Sweet, tangy, and absolutely electric."
+                                data-sizes="100ml, 250ml, 1.25 L"
+                                data-color="var(--primary-red)">
+                                See Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -174,14 +176,16 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Neon Lime</h3>
-                            <ul class="product-sizes list-unstyled d-flex justify-content-center gap-2 mb-3">
-                                <li>100ml</li>
-                                <li>250ml</li>
-                                <li>1.25 L</li>
-                            </ul>
-                            <p class="card-text">The ultimate zest. Crisp lime with a hint of cooling mint that hits you
-                                with a wave of freshness.</p>
-                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4">See Details</button>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#productModal"
+                                data-title="Neon Lime"
+                                data-img="assets/images/product-green.png"
+                                data-desc="The ultimate zest. Crisp lime with a hint of cooling mint that hits you with a wave of freshness."
+                                data-sizes="100ml, 250ml, 1.25 L"
+                                data-color="var(--primary-green)">
+                                See Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -195,14 +199,16 @@
                         </div>
                         <div class="card-body">
                             <h3 class="card-title">Citrus Sun</h3>
-                            <ul class="product-sizes list-unstyled d-flex justify-content-center gap-2 mb-3">
-                                <li>100ml</li>
-                                <li>250ml</li>
-                                <li>1.25 L</li>
-                            </ul>
-                            <p class="card-text">A sunny delight. Juicy oranges mixed with tropical mango notes for a
-                                vacay in a bottle.</p>
-                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4">See Details</button>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4"
+                                data-bs-toggle="modal" 
+                                data-bs-target="#productModal"
+                                data-title="Citrus Sun"
+                                data-img="assets/images/product-orange.png"
+                                data-desc="A sunny delight. Juicy oranges mixed with tropical mango notes for a vacay in a bottle."
+                                data-sizes="100ml, 250ml, 1.25 L"
+                                data-color="var(--primary-orange)">
+                                See Details
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -252,6 +258,30 @@
             <p class="mb-0 text-muted">&copy; 2025 Ehsaas Cold Drinks. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg" style="overflow: hidden;">
+                <div class="modal-header border-0 bg-light p-4">
+                    <h5 class="modal-title fs-2 fw-bold" id="productModalLabel" style="font-family: var(--font-heading);">Product Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="text-center p-4" id="modal-img-container" style="background-color: #f8f9fa;">
+                         <img src="" id="modal-product-img" class="img-fluid" style="height: 250px; object-fit: contain;">
+                    </div>
+                    <div class="p-4 text-center">
+                        <p id="modal-product-desc" class="lead text-muted mb-4"></p>
+                        <h5 class="mb-3 fw-bold">Available Sizes:</h5>
+                        <ul id="modal-product-sizes" class="list-inline">
+                            <!-- Sizes injected via JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
