@@ -24,61 +24,24 @@
   /* Hero Section Mobile */
   .hero-section {
     height: auto;
-    min-height: 100vh;
-    padding: 120px 0 80px;
-    text-align: center;
+    min-height: 60vh;
+    /* Reduced height to avoid excessive cropping */
+    padding: 0;
+    background-position: center;
+    /* keep center, or adjust if needed */
+    background-size: cover;
+    /* Ensure it covers dimensions */
   }
 
-  .hero-content {
-    order: 2;
-    /* Put text below image on mobile if desired, or keep as is. Bootstrap col-lg-6 puts text first, then image. Let's keep default but center everything. */
-    margin-top: 2rem;
-  }
-
-  .hero-content.text-lg-start {
-    text-align: center !important;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-    /* Smaller font for mobile */
-  }
-
-  .hero-subtitle {
-    font-size: 1.1rem;
-  }
-
-  .hero-image {
-    max-height: 40vh;
-    /* Smaller image on mobile */
-    margin-bottom: 1rem;
-  }
-
-  .hero-title-wrapper img {
-    max-height: 100px !important;
-    /* Smaller text-image logo */
-  }
-
-  /* Section Spacing */
-  .about-section,
-  .products-section,
-  .contact-section {
-    padding: 60px 0;
-    /* Reduced padding */
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  /* Product Cards */
-  .product-img-wrapper {
-    height: 250px;
+  .wave-divider svg {
+    height: 50px;
+    /* Smaller wave for mobile */
   }
 
   /* Footer Section */
   .footer-section {
     text-align: center;
+    padding: 40px 0;
   }
 
   .footer-section .col-md-6.text-md-end {
@@ -86,8 +49,15 @@
     margin-top: 1rem;
   }
 
-  .social-links a {
-    margin: 0 10px;
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
   }
 }
 
