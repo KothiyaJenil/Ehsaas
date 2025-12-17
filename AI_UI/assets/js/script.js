@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Scroll Animation Observer
+  /* ============================================ */
+  /*               Scroll Animation               */
+  /* ============================================ */
   const revealElements = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -20,18 +22,20 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
-  // Navbar Scroll Effect (Optional enhancement)
+  /* ============================================ */
+  /*             Navbar Scroll Effect             */
+  /* ============================================ */
   const navbar = document.querySelector('.navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      navbar.style.padding = '0.5rem 0';
-      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.98) !important';
+      navbar.classList.add('scrolled');
     } else {
-      navbar.style.padding = '1rem 0';
-      navbar.style.backgroundColor = 'rgba(26, 26, 26, 0.95) !important';
+      navbar.classList.remove('scrolled');
     }
   });
-  // Product Modal Logic
+  /* ============================================ */
+  /*             Product Modal Logic              */
+  /* ============================================ */
   const productModal = document.getElementById('productModal');
   if (productModal) {
     productModal.addEventListener('show.bs.modal', function (event) {
@@ -54,15 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       modalTitle.textContent = title;
       modalTitle.style.color = color;
-
+      
       modalImg.src = img;
-      modalImgContainer.style.backgroundColor = color.replace(')', ', 0.1)').replace('rgb', 'rgba').replace('hex', 'rgba'); // Simple tint or keep white
-      // Actually let's just keep the white/gray bg for cleanliness, or use the color:
-      // A better way for dynamic bg opacity might be tricky without full parsing, so let's stick to a clean look or simple tint if possible. 
-      // For now, let's just create a soft-colored background.
-      modalImgContainer.style.background = `linear-gradient(135deg, white 0%, ${color}20 100%)`; // Hex + alpha hex if color is hex, might fail if var(). 
-      // Safest is white or simple grey for now to avoid CSS parsing issues.
-      modalImgContainer.style.background = '#f8f9fa';
+      modalImgContainer.style.backgroundColor = '#f8f9fa'; // Keep simple light bg
 
       modalDesc.textContent = desc;
 

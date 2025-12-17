@@ -75,6 +75,20 @@
   .product-img-wrapper {
     height: 250px;
   }
+
+  /* Footer Section */
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section .col-md-6.text-md-end {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+
+  .social-links a {
+    margin: 0 10px;
+  }
 }
 
 @media (max-width: 576px) {
