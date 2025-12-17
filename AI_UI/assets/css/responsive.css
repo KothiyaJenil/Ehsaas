@@ -24,13 +24,9 @@
   /* Hero Section Mobile */
   .hero-section {
     height: auto;
-    min-height: 60vh;
-    /* Reduced height to avoid excessive cropping */
+    min-height: auto;
+    /* Let image define height */
     padding: 0;
-    background-position: center;
-    /* keep center, or adjust if needed */
-    background-size: cover;
-    /* Ensure it covers dimensions */
   }
 
   .wave-divider svg {

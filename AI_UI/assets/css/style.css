@@ -120,25 +120,51 @@ h6,
 /* ============================================ */
 .hero-section {
     position: relative;
-    height: 100vh;
-    background: url('../images/hero-banner.jpg') no-repeat center center/cover;
+    /* Removed fixed height/background to let image dictate size, or use min-height if preferred. */
     overflow: hidden;
     display: flex;
     align-items: center;
+    justify-content: center;
     color: var(--light-text);
+    padding: 0;
 }
 
-.hero-content {
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Note: User asked for height: auto, but to act as a proper background replacement 
+     that covers the area (implied by previous full screen request), usually absolute + height 100% is needed 
+     if the parent has height 100vh. 
+     If the user wants the IMAGE to dictate height, then parent height should be auto.
+     However, user provided explicit CSS: width: 100%; height: auto; display: block; object-fit: cover;
+     I will stick to EXACTLY what user asked for on the .hero-img class, but for it to work as a background 
+     behind content (bubbles/wave), it might need position adjustment. 
+     Since there is no other content in hero, just bubbles/wave overlaying, 
+     having the image be static height:auto is fine, bubbles will overlay absolute. 
+  */
+}
+
+/* User's exact requested CSS overrides: */
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* To ensure it stays BEHIND bubbles/wave which are absolute */
     position: relative;
-    z-index: 2;
+    z-index: 0;
 }
 
-.hero-title {
-    font-size: 4rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.bubbles-container,
+.wave-divider {
+    z-index: 1;
+    /* Ensure overlays are on top */
 }
 
 .hero-subtitle {
