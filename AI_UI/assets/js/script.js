@@ -2,24 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================ */
   /*               Scroll Animation               */
   /* ============================================ */
-  const revealElements = document.querySelectorAll('.reveal');
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        // Optional: Stop observing once revealed
-        // observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    root: null,
-    threshold: 0.15, // Trigger when 15% of the element is visible
-    rootMargin: "0px"
-  });
-
-  revealElements.forEach(el => {
-    revealObserver.observe(el);
+  // Initialize AOS
+  AOS.init({
+    duration: 800,
+    once: true,
   });
 
   /* ============================================ */
@@ -58,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       modalTitle.textContent = title;
       modalTitle.style.color = color;
-      
+
       modalImg.src = img;
       modalImgContainer.style.backgroundColor = '#f8f9fa'; // Keep simple light bg
 
