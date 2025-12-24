@@ -3,7 +3,7 @@
 <!-- ============================================ -->
 <!--                 Hero Section                 -->
 <!-- ============================================ -->
-<section id="index" class="hero-section">
+<section id="home" class="hero-section">
   <img src="assets/images/hero-banner.jpg" class="hero-img" alt="Hero Banner">
   <!-- Floating Bubbles Background -->
   <div class="bubbles-container">
@@ -22,6 +22,8 @@
     <span class="bubble"
       style="width: 10px; height: 10px; left: 90%; animation-duration: 6s; animation-delay: 5s;"></span>
   </div>
+
+
 
   <!-- Wave Separator -->
   <div class="wave-divider">
@@ -43,9 +45,11 @@
         <h2 class="section-title">About Us</h2>
         <p class="lead">At EHSAAS, we bring you the perfect blend of tradition and innovation in refreshing
           beverages. With a commitment to quality and taste, our wide range of products are crafted to
-          delight consumers across India.</p>
+          delight consumers across India. Every sip carries the promise of freshness, natural flavors, and
+          the highest standards of production.</p>
       </div>
     </div>
+
 
     <div class="row g-4">
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
@@ -54,8 +58,10 @@
             <img src="assets/images/Quality.jpg" alt="Quality" class="about-card-img">
           </div>
           <h4 class="mb-3">Quality</h4>
-          <p>We believe quality is the foundation of trust. Our beverages are made with carefully selected ingredients, processed under strict hygiene standards, and tested to ensure purity and consistency. By combining advanced technology with world-class quality assurance, we deliver products that customers can rely on every day.
-          </p>
+          <p>We believe quality is the foundation of trust. Our beverages are made with carefully selected
+            ingredients, processed under strict hygiene standards, and tested to ensure purity and
+            consistency. By combining advanced technology with world-class quality assurance, we deliver
+            products that customers can rely on every day.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
@@ -64,8 +70,10 @@
             <img src="assets/images/INNOVATION & RESEARCH.jpg" alt="Innovation" class="about-card-img">
           </div>
           <h4 class="mb-3">INNOVATION & RESEARCH</h4>
-          <p>Innovation drives us forward. Our dedicated R&D team continuously works to create new flavors, improve existing products, and study consumer preferences. This helps us stay ahead of trends and bring exciting beverages that match today’s lifestyle while keeping health and taste in balance.
-          </p>
+          <p>Innovation drives us forward. Our dedicated R&D team continuously works to create new
+            flavors, improve existing products, and study consumer preferences. This helps us stay ahead
+            of trends and bring exciting beverages that match today’s lifestyle while keeping health and
+            taste in balance.</p>
         </div>
       </div>
       <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
@@ -74,12 +82,13 @@
             <img src="assets/images/MODERN FACILITIES.jpg" alt="Facilities" class="about-card-img">
           </div>
           <h4 class="mb-3">MODERN FACILITIES</h4>
-          <p>Our state-of-the-art production facility is equipped with advanced machinery, automation, and infrastructure to ensure efficiency and scalability. Located in [Your City], our plant operates with eco-friendly practices and the highest safety standards. Our skilled workforce ensures every bottle meets perfection before reaching you.
-          </p>
+          <p>Our state-of-the-art production facility is equipped with advanced machinery, automation, and
+            infrastructure to ensure efficiency and scalability. Located in [Your City], our plant
+            operates with eco-friendly practices and the highest safety standards. Our skilled workforce
+            ensures every bottle meets perfection before reaching you.</p>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -147,10 +156,6 @@
         </div>
       </div>
     </div>
-
-    <div class="text-center mt-5">
-      <a href="products.php" class="btn btn-custom px-5 py-3 rounded-pill fs-5">View All Products</a>
-    </div>
   </div>
 </section>
 
@@ -163,37 +168,25 @@
       <div class="col-lg-8" data-aos="fade-up">
         <div class="text-center mb-5">
           <h2 class="section-title">Get In Touch</h2>
-          <p class="lead">Have a question or want to partner with us? Drop us a line.</p>
+          <p>Have a question or want to partner with us? Drop us a line.</p>
         </div>
-
-        <!-- Contact Form Card -->
-        <div class="contact-card mb-5">
-          <form>
-            <div class="mb-4">
-              <label class="form-label">Your Name</label>
-              <input type="text" class="form-control" placeholder="Enter your name">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" placeholder="Your Name">
             </div>
-
-            <div class="mb-4">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-control" placeholder="example@gmail.com">
+            <div class="col-md-6">
+              <input type="email" class="form-control" placeholder="Your Email">
             </div>
-
-            <div class="mb-4">
-              <label class="form-label">Your Message</label>
-              <textarea class="form-control" rows="5"
-                placeholder="Tell us about your inquiry, partnership opportunities, or any questions you have..."></textarea>
-            </div>
-
-            <div class="text-center">
-              <button type="submit" class="btn btn-contact-submit">Send Message</button>
-            </div>
-          </form>
-        </div>
-
+          </div>
+          <input type="text" class="form-control" placeholder="Subject">
+          <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+          <div class="text-center">
+            <button type="submit" class="btn btn-custom px-5">Send Message</button>
+          </div>
+        </form>
       </div>
     </div>
-
   </div>
 </section>
 
