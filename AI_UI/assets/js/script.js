@@ -61,4 +61,35 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  /* ============================================ */
+  /*             Active Link Highlighting         */
+  /* ============================================ */
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  function setActiveLink() {
+    let current = '';
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      // Offset for sticky navbar (approx 100px)
+      if (window.scrollY >= (sectionTop - 150)) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href').includes(current)) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', setActiveLink);
+
+  // Set initial active state
+  setActiveLink();
+
 });
