@@ -4,6 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="EHSAAS Cold Drinks - Bringing you the perfect blend of tradition and innovation in refreshing beverages. Quality, taste, and freshness in every sip.">
+    <meta name="keywords" content="EHSAAS, cold drinks, beverages, refreshment, soda, juice, made in india, soft drinks">
+    <meta name="author" content="EHSAAS">
+    <meta name="theme-color" content="#E52525">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="EHSAAS Cold Drinks | Feel the Refreshment">
+    <meta property="og:description" content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
+    <meta property="og:image" content="assets/images/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="EHSAAS Cold Drinks | Feel the Refreshment">
+    <meta property="twitter:description" content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
+    <meta property="twitter:image" content="assets/images/logo.png">
+
+    <!-- Icons -->
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
     <title>EHSAAS Cold Drinks | Feel the Refreshment</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
