@@ -59,15 +59,6 @@
       </div>
     </div>
 
-    <!-- See More Button Section -->
-    <div class="row mt-5">
-      <div class="col-12 text-center" data-aos="fade-up">
-        <button class="btn btn-outline-custom rounded-pill px-5 py-3 fs-5" id="load-more-btn">
-          See More flavors <i class="fas fa-arrow-right ms-2"></i>
-        </button>
-      </div>
-    </div>
-
   </div>
 </section>
 

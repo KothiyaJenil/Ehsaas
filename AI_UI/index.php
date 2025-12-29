@@ -3,7 +3,7 @@
 <!-- ============================================ -->
 <!--                 Hero Section                 -->
 <!-- ============================================ -->
-<section id="home" class="hero-section">
+<section id="index" class="hero-section">
   <img src="assets/images/hero-banner.jpg" class="hero-img" alt="Hero Banner">
   <!-- Floating Bubbles Background -->
   <div class="bubbles-container">
@@ -156,6 +156,15 @@
         </div>
       </div>
     </div>
+
+    <!-- See All Products Button -->
+    <div class="row mt-5">
+      <div class="col-12 text-center" data-aos="fade-up">
+        <a href="products.php" class="btn btn-custom rounded-pill px-5 py-3 fs-5">
+          See All Products <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -170,21 +179,29 @@
           <h2 class="section-title">Get In Touch</h2>
           <p>Have a question or want to partner with us? Drop us a line.</p>
         </div>
-        <form>
-          <div class="row">
-            <div class="col-md-6">
-              <input type="text" class="form-control" placeholder="Your Name">
+        <div class="contact-card mb-5">
+          <form>
+            <div class="mb-4">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-control" placeholder="Enter your full name">
             </div>
-            <div class="col-md-6">
-              <input type="email" class="form-control" placeholder="Your Email">
+
+            <div class="mb-4">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-control" placeholder="your.email@example.com">
             </div>
-          </div>
-          <input type="text" class="form-control" placeholder="Subject">
-          <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-          <div class="text-center">
-            <button type="submit" class="btn btn-custom px-5">Send Message</button>
-          </div>
-        </form>
+
+            <div class="mb-4">
+              <label class="form-label">Your Message</label>
+              <textarea class="form-control" rows="5"
+                placeholder="Tell us about your inquiry, partnership opportunities, or any questions you have..."></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-contact-submit">Send Message</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Meta Tags -->
-    <meta name="description" content="EHSAAS Cold Drinks - Bringing you the perfect blend of tradition and innovation in refreshing beverages. Quality, taste, and freshness in every sip.">
-    <meta name="keywords" content="EHSAAS, cold drinks, beverages, refreshment, soda, juice, made in india, soft drinks">
+    <meta name="description"
+        content="EHSAAS Cold Drinks - Bringing you the perfect blend of tradition and innovation in refreshing beverages. Quality, taste, and freshness in every sip.">
+    <meta name="keywords"
+        content="EHSAAS, cold drinks, beverages, refreshment, soda, juice, made in india, soft drinks">
     <meta name="author" content="EHSAAS">
     <meta name="theme-color" content="#E52525">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="EHSAAS Cold Drinks | Feel the Refreshment">
-    <meta property="og:description" content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
+    <meta property="og:description"
+        content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
     <meta property="og:image" content="assets/images/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="EHSAAS Cold Drinks | Feel the Refreshment">
-    <meta property="twitter:description" content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
+    <meta property="twitter:description"
+        content="Bringing you the perfect blend of tradition and innovation. Quality, taste, and freshness in every sip.">
     <meta property="twitter:image" content="assets/images/logo.png">
 
     <!-- Icons -->
@@ -33,6 +37,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- AOS Animation CSS -->
@@ -41,15 +46,31 @@
 
 <body>
 
+    <!-- Loader Overlay -->
+    <div id="loader-overlay">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Loader Script -->
+    <script>
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('loader-overlay');
+            loader.classList.add('loader-hidden');
+
+            loader.addEventListener('transitionend', function () {
+                if (document.body.contains(loader)) {
+                    document.body.removeChild(loader);
+                }
+            });
+        });
+    </script>
+
+
     <!-- ============================================ -->
     <!--                 Navigation                   -->
     <!-- ============================================ -->
     <?php
     $current_page = basename($_SERVER['SCRIPT_NAME']);
-    // Handle case where accessing root directory (e.g., /AI_UI/) returns empty or matches directory name
-    if ($current_page == '' || $current_page == 'AI_UI' || $current_page == 'index') {
-        $current_page = 'index.php';
-    }
     // Debug output to view source
     echo "<!-- Current Page Detected: " . $current_page . " -->";
     ?>

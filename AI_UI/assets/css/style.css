@@ -172,12 +172,7 @@ h6,
     /* Ensure overlays are on top */
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-}
+
 
 .btn-custom {
     background: linear-gradient(45deg, var(--primary-red), var(--primary-orange));
@@ -211,11 +206,7 @@ h6,
     }
 }
 
-.hero-image {
-    max-height: 80vh;
-    /* animation removed */
-    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
-}
+
 
 /* Wave Separator */
 .wave-divider {
@@ -251,6 +242,10 @@ h6,
     max-height: 400px;
     width: 100%;
     object-fit: cover;
+}
+
+.about-card-title{
+    color: var(--primary-orange);
 }
 
 .about-card-img {
@@ -395,14 +390,7 @@ h6,
 }
 
 
-.product-sizes li {
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: #555;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2px 8px;
-    border-radius: 12px;
-}
+
 
 .card-title {
     font-size: 1.8rem;
@@ -565,41 +553,7 @@ h6,
     color: white;
 }
 
-/* Info Cards (Email, Call, Visit) */
-.info-card {
-    background: white;
-    padding: 2rem 1rem;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-}
 
-.info-card:hover {
-    transform: translateY(-10px);
-}
-
-.info-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-}
-
-.info-title {
-    font-weight: 700;
-    color: var(--primary-red);
-    margin-bottom: 0.5rem;
-    font-family: var(--font-heading);
-}
-
-.info-text {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0;
-}
 
 /* ============================================ */
 /*                    Footer                    */

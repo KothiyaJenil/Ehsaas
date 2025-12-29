@@ -7,8 +7,10 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8" data-aos="fade-up">
-
-        <!-- Contact Form Card -->
+        <div class="text-center mb-5">
+          <h2 class="section-title">Get In Touch</h2>
+          <p>Have a question or want to partner with us? Drop us a line.</p>
+        </div>
         <div class="contact-card mb-5">
           <form>
             <div class="mb-4">
@@ -32,10 +34,8 @@
             </div>
           </form>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
 
