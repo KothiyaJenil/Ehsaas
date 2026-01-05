@@ -55,6 +55,29 @@
     justify-content: center;
     display: flex;
   }
+
+  /* Product Cards Spacing - Tablet */
+  .product-cards-row {
+    row-gap: 4rem;
+  }
+
+  /* About Section Animated Circles - Tablet */
+  .about-circle {
+    transform: scale(0.6);
+    opacity: 0.175;
+  }
+
+  @keyframes floatUpDown {
+
+    0%,
+    100% {
+      transform: scale(0.6) translateY(0px);
+    }
+
+    50% {
+      transform: scale(0.6) translateY(-20px);
+    }
+  }
 }
 
 @media (max-width: 576px) {
@@ -69,5 +92,27 @@
   .btn-custom {
     padding: 10px 25px;
     font-size: 1rem;
+  }
+
+  /* Product Cards Spacing - Mobile */
+  .product-cards-row {
+    column-gap: 1.5rem;
+  }
+
+  /* About Section Animated Circles - Mobile */
+  .about-circle {
+    transform: scale(0.4);
+  }
+
+  @keyframes floatUpDown {
+
+    0%,
+    100% {
+      transform: scale(0.4) translateY(0px);
+    }
+
+    50% {
+      transform: scale(0.4) translateY(-15px);
+    }
   }
 }
