@@ -2,145 +2,392 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="Website Icon" type="png" href="images/logo.png">
-  <title>Ehsaas - Feel The Every Drop</title>
-
-  <link rel="stylesheet" href="css/style.css">
-
-
-  <!-- ---------------------------- Google Fonts ----------------------------- -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- ---------------------------- font awesome ----------------------------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- ---------------------------- bootstrap css ---------------------------- -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EHSAAS Cold Drinks | Feel the Refreshment</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ----------------------------------------------------------------------- -->
-  <!--*                          navbar section start                           -->
-  <!-- ----------------------------------------------------------------------- -->
-
-  <header id="navbar">
-    <nav>
-      <div class="logo">
-        <img src="images/logo.png" alt="">
-      </div>
-      <button class="menu-toggle" aria-label="Toggle Menu" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#About Us">About Us</a></li>
-        <li><a href="#Products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- ============================================ -->
+    <!--                 Navigation                   -->
+    <!-- ============================================ -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="EHSAAS" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-  </header>
 
-  <!-- ----------------------------------------------------------------------- -->
-  <!--*                           navbar section end                            -->
-  <!-- ----------------------------------------------------------------------- -->
-
-  <main>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--*                           hero section start                            -->
-    <!-- ----------------------------------------------------------------------- -->
-
-    <section class="hero-section">
-      <div class="hero-img-wrapper">
-        <img src="images/hero-img-2.jpg" alt="" class="hero-img">
-        <div class="bubbles"></div>
-      </div>
-    </section>
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--*                            hero section end                             -->
-    <!-- ----------------------------------------------------------------------- -->
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--*                          product section start                          -->
-    <!-- ----------------------------------------------------------------------- -->
-
-    <section class="product-section py-5" id="product">
-      <div class="container text-center">
-        <h2 class="section-heading">About us</h2>
-
-        <p class="pt-5">At EHSAAS, we bring you the perfect blend of tradition and innovation in refreshing
-          beverages. With a commitment to quality and taste, our wide range of products are crafted to delight consumers
-          across India. Every sip carries the promise of freshness, natural flavors, and the highest standards of
-          production</p>
-
-        <div class="container py-5">
-          <div class="row g-4">
-
-            <!-- Card 1 -->
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img src="images/Quality.jpg" class="card-img-top" alt="">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="product-card-title pt-3 pb-2">Quality</h5>
-                  <p class="card-text">We believe quality is the foundation of trust. Our beverages are made with
-                    carefully selected ingredients, processed under strict hygiene standards, and tested to ensure
-                    purity and consistency. By combining advanced technology with world-class quality assurance, we
-                    deliver products that customers can rely on every day.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img src="images/INNOVATION & RESEARCH.jpg" class="card-img-top" alt="">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="product-card-title pt-3 pb-2">INNOVATION & RESEARCH
-                  </h5>
-                  <p class="card-text">Innovation drives us forward. Our dedicated R&D team continuously works to create
-                    new flavors, improve existing products, and study consumer preferences. This helps us stay ahead of
-                    trends and bring exciting beverages that match today’s lifestyle while keeping health and taste in
-                    balance.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-12 col-sm-6 col-md-4">
-              <div class="card h-100 shadow-sm">
-                <img src="images/MODERN FACILITIES.jpg" class="card-img-top" alt="">
-                <div class="card-body d-flex flex-column">
-                  <h5 class="product-card-title pt-3 pb-2">MODERN FACILITIES</h5>
-                  <p class="card-text">Our state-of-the-art production facility is equipped with advanced machinery,
-                    automation, and infrastructure to ensure efficiency and scalability. Located in [Your City], our
-                    plant operates with eco-friendly practices and the highest safety standards. Our skilled workforce
-                    ensures every bottle meets perfection before reaching you.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          </div>
+    <!-- ============================================ -->
+    <!--                 Hero Section                 -->
+    <!-- ============================================ -->
+    <section id="home" class="hero-section">
+        <img src="assets/images/hero-banner.jpg" class="hero-img" alt="Hero Banner">
+        <!-- Floating Bubbles Background -->
+        <div class="bubbles-container">
+            <span class="bubble"
+                style="width: 20px; height: 20px; left: 10%; animation-duration: 8s; animation-delay: 2s;"></span>
+            <span class="bubble"
+                style="width: 30px; height: 30px; left: 20%; animation-duration: 10s; animation-delay: 1s;"></span>
+            <span class="bubble"
+                style="width: 15px; height: 15px; left: 35%; animation-duration: 7s; animation-delay: 4s;"></span>
+            <span class="bubble"
+                style="width: 40px; height: 40px; left: 50%; animation-duration: 12s; animation-delay: 0s;"></span>
+            <span class="bubble"
+                style="width: 25px; height: 25px; left: 65%; animation-duration: 9s; animation-delay: 3s;"></span>
+            <span class="bubble"
+                style="width: 35px; height: 35px; left: 80%; animation-duration: 11s; animation-delay: 2s;"></span>
+            <span class="bubble"
+                style="width: 10px; height: 10px; left: 90%; animation-duration: 6s; animation-delay: 5s;"></span>
         </div>
 
-      </div>
+        <!-- Wave Separator -->
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
-    <!-- ----------------------------------------------------------------------- -->
-    <!--*                           product section end                           -->
-    <!-- ----------------------------------------------------------------------- -->
+    <!-- ============================================ -->
+    <!--                 About Section                -->
+    <!-- ============================================ -->
+    <section id="about" class="about-section">
+        <!-- Animated Decorative Circles -->
+        <div class="about-circles-container">
+            <span class="about-circle circle-orange"
+                style="width: 80px; height: 80px; top: 10%; left: 5%; animation-duration: 4s; animation-delay: 0s;"></span>
+            <span class="about-circle circle-green"
+                style="width: 60px; height: 60px; top: 20%; right: 8%; animation-duration: 5s; animation-delay: 1s;"></span>
+            <span class="about-circle circle-orange"
+                style="width: 100px; height: 100px; bottom: 15%; left: 10%; animation-duration: 6s; animation-delay: 2s;"></span>
+            <span class="about-circle circle-green"
+                style="width: 70px; height: 70px; bottom: 25%; right: 5%; animation-duration: 5.5s; animation-delay: 0.5s;"></span>
+            <span class="about-circle circle-orange"
+                style="width: 50px; height: 50px; top: 50%; left: 3%; animation-duration: 4.5s; animation-delay: 1.5s;"></span>
+            <span class="about-circle circle-green"
+                style="width: 90px; height: 90px; top: 60%; right: 7%; animation-duration: 5s; animation-delay: 0s;"></span>
+        </div>
 
-  </main>
-  <script src="js/script.js"></script>
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10 text-center" data-aos="fade-up">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="lead">At EHSAAS, we bring you the perfect blend of tradition and innovation in refreshing
+                        beverages. With a commitment to quality and taste, our wide range of products are crafted to
+                        delight consumers across India. Every sip carries the promise of freshness, natural flavors, and
+                        the highest standards of production.</p>
+                </div>
+            </div>
+
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3">
+                            <img src="assets/images/Quality.jpg" alt="Quality" class="about-card-img">
+                        </div>
+                        <h4 class="mb-3 about-card-title">Quality</h4>
+                        <p>We believe quality is the foundation of trust. Our beverages are made with carefully selected
+                            ingredients, processed under strict hygiene standards, and tested to ensure purity and
+                            consistency. By combining advanced technology with world-class quality assurance, we deliver
+                            products that customers can rely on every day.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3">
+                            <img src="assets/images/INNOVATION & RESEARCH.jpg" alt="Innovation"
+                                class="about-card-img">
+                        </div>
+                        <h4 class="mb-3 about-card-title">INNOVATION & RESEARCH</h4>
+                        <p>Innovation drives us forward. Our dedicated R&D team continuously works to create new
+                            flavors, improve existing products, and study consumer preferences. This helps us stay ahead
+                            of trends and bring exciting beverages that match today’s lifestyle while keeping health and
+                            taste in balance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 h-100 bg-white rounded-3 shadow-sm text-center">
+                        <div class="mb-3">
+                            <img src="assets/images/MODERN FACILITIES.jpg" alt="Facilities"
+                                class="about-card-img">
+                        </div>
+                        <h4 class="mb-3 about-card-title">MODERN FACILITIES</h4>
+                        <p>Our state-of-the-art production facility is equipped with advanced machinery, automation, and
+                            infrastructure to ensure efficiency and scalability. Located in [Your City], our plant
+                            operates with eco-friendly practices and the highest safety standards. Our skilled workforce
+                            ensures every bottle meets perfection before reaching you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--               Products Section               -->
+    <!-- ============================================ -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title text-center w-100 mb-5 pb-5" data-aos="fade-up">Our Flavors</h2>
+            <div class="row product-cards-row">
+                <!-- Red Product -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-card flavor-red h-100">
+                        <div class="product-blob-bg"></div>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/product-red-1.png" alt="Ehsaas Red" class=" ">
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h3 class="card-title mt-3">Berry Blast</h3>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4" data-bs-toggle="modal"
+                                data-bs-target="#productModal" data-title="Berry Blast"
+                                data-img="assets/images/product-red.png"
+                                data-desc="A bold fusion of ripe strawberries and cherries. Sweet, tangy, and absolutely electric."
+                                data-sizes="100ml, 250ml, 1.25 L" data-color="var(--primary-red)">
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green Product -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card flavor-green h-100">
+                        <div class="product-blob-bg"></div>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/product-green-1.png" alt="Ehsaas Green" class="img-fluid">
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h3 class="card-title mt-3">Neon Lime</h3>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4" data-bs-toggle="modal"
+                                data-bs-target="#productModal" data-title="Neon Lime"
+                                data-img="assets/images/product-green.png"
+                                data-desc="The ultimate zest. Crisp lime with a hint of cooling mint that hits you with a wave of freshness."
+                                data-sizes="100ml, 250ml, 1.25 L" data-color="var(--primary-green)">
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orange Product -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-card flavor-orange h-100">
+                        <div class="product-blob-bg"></div>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/product-orange-1.png" alt="Ehsaas Orange" class="img-fluid">
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h3 class="card-title mt-3">Citrus Sun</h3>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4" data-bs-toggle="modal"
+                                data-bs-target="#productModal" data-title="Citrus Sun"
+                                data-img="assets/images/product-orange.png"
+                                data-desc="A sunny delight. Juicy oranges mixed with tropical mango notes for a vacay in a bottle."
+                                data-sizes="100ml, 250ml, 1.25 L" data-color="var(--primary-orange)">
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-card flavor-green h-100">
+                        <div class="product-blob-bg"></div>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/product-green-1.png" alt="Ehsaas Green" class="img-fluid">
+                        </div>
+                        <div class="card-body d-flex flex-column align-items-center">
+                            <h3 class="card-title mt-3">Neon Lime</h3>
+                            <button class="btn btn-outline-custom rounded-pill mt-3 px-4" data-bs-toggle="modal"
+                                data-bs-target="#productModal" data-title="Neon Lime"
+                                data-img="assets/images/product-green.png"
+                                data-desc="The ultimate zest. Crisp lime with a hint of cooling mint that hits you with a wave of freshness."
+                                data-sizes="100ml, 250ml, 1.25 L" data-color="var(--primary-green)">
+                                See Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- See All Products Button -->
+            <div class="row mt-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <a href="products.php" class="btn btn-custom rounded-pill px-5 py-3 fs-5">
+                        See All Products <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--               Contact Section                -->
+    <!-- ============================================ -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="text-center mb-5">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="lead">Have a question or want to partner with us? Drop us a line.</p>
+                    </div>
+
+                    <!-- Contact Form Card -->
+                    <div class="contact-card mb-5">
+                        <form>
+                            <div class="mb-4">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" class="form-control" placeholder="Enter your name">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="example@gmail.com">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Your Message</label>
+                                <textarea class="form-control" rows="5"
+                                    placeholder="Tell us about your inquiry, partnership opportunities, or any questions you have..."></textarea>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-contact-submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                    Footer                    -->
+    <!-- ============================================ -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Column 1: Company Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <div class="footer-logo mb-3">
+                        <img src="./assets/images/logo.png" class="img-fluid w-50" alt="">
+                    </div>
+                    <p class="text-white-50 mb-4">EHSAAS is a complete beverages company, bringing the best of
+                        traditional and contemporary flavors. We offer a wide range of refreshing drinks to delight
+                        every palate.</p>
+                    <div class="contact-info text-white-50">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary-orange"></i> SURVEY NO. 123,
+                            NEAR HIGHWAY, YOUR CITY, GUJARAT, INDIA</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt me-2 text-primary-orange"></i> +91 98765 43210</p>
+                        <p class="mb-2"><i class="fas fa-envelope me-2 text-primary-orange"></i>
+                            info@ehsaasbeverages.com</p>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h4 class="footer-title mb-3">Quick Links</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Products -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-title mb-3">Products</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Carbonated Beverages</a></li>
+                        <li><a href="#">Fruit Juices</a></li>
+                        <li><a href="#">Energy Drinks</a></li>
+                        <li><a href="#">Packaged Water</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="mt-5 mb-4 border-secondary">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-white-50">&copy; 2025 Ehsaas Cold Drinks. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!--             Product Detail Modal             -->
+    <!-- ============================================ -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow-lg" style="overflow: hidden;">
+                <div class="modal-header border-0 bg-light p-4">
+                    <h5 class="modal-title fs-2 fw-bold" id="productModalLabel"
+                        style="font-family: var(--font-heading);">Product Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="text-center p-4" id="modal-img-container" style="background-color: #f8f9fa;">
+                        <img src="" id="modal-product-img" class="img-fluid"
+                            style="height: 250px; object-fit: contain;">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h5 class="mb-3 fw-bold">Available Sizes:</h5>
+                        <ul id="modal-product-sizes" class="list-inline mb-4">
+                            <!-- Sizes injected via JS -->
+                        </ul>
+                        <p id="modal-product-desc" class="lead text-muted"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
